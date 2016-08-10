@@ -18,8 +18,10 @@ the main function for the game
 #endif
 
 //all of the assorted classes
+#include "peace.h"
 #include "print.h"
 #include "input.h"
+#include "bord.h"
 #include <iostream>
 #include <random>
 #include <ctime>
@@ -34,6 +36,9 @@ int main(int argc,char **argv){
 	SDL_Init(SDL_INIT_EVERYTHING);
 	print printer;
 	input in;
-	printer.printOut();
+	bord bor(&printer);
+	peace testpeace(&printer,"WQ",'D',1);
+	bor.addpeace(&testpeace);
+	bor.disp();
 	while(!in.spacekey()){}
 }

@@ -53,6 +53,7 @@ void print::RenderTextScale(int pos, int x, int y, int s){
 }
 
 int print::Obj(string loc){
+	loc= "gameImages/" + loc;
 	int location = -1;
 	//fids wether the object exists in the renderer alredy or adds it to the code then returns the position of the object
 	for (int i = 0; i < names_.size(); i++){
