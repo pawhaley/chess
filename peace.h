@@ -10,6 +10,7 @@ public:
 	char posX(){return _posx;}
 	int posY(){return _posy;}
 	int image(){return _image;}
+	void setPos(char posx,int posy){_posx=posx;_posy=posy;}
 private:
 	print* _ptr;
 	int _image;

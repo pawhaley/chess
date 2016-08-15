@@ -18,10 +18,11 @@ the main function for the game
 #endif
 
 //all of the assorted classes
-#include "peace.h"
-#include "print.h"
+//#include "peace.h"
+//#include "print.h"
 #include "input.h"
-#include "bord.h"
+//#include "bord.h"
+#include "game.h"
 #include <iostream>
 #include <random>
 #include <ctime>
@@ -34,11 +35,9 @@ using std::endl;
 
 int main(int argc,char **argv){
 	SDL_Init(SDL_INIT_EVERYTHING);
-	print printer;
+	player u1;
+	player u2;
+	game newgame(&u1,&u2,1);
 	input in;
-	bord bor(&printer);
-	peace testpeace(&printer,"WQ",'D',1);
-	bor.addpeace(&testpeace);
-	bor.disp();
 	while(!in.spacekey()){}
 }

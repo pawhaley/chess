@@ -3,6 +3,7 @@
 #include "player.h"
 #include "bord.h"
 #include "peace.h"
+#include "print.h"
 #include <vector>
 #include <string>
 using std::vector;
@@ -14,12 +15,13 @@ public:
 	int winner();
 private:
 	void makePeace(string type,char posx,int posy);
+	void Move(string moveQ);
 	player* _wight;
 	player* _black;
-	vector<peace> _peaces;
+	vector<peace*> _peaces;
 	bord* _thebord;
 	bool _disp;
-	printer* _printer;
-}
+	print* _printer;
+};
 
 #endif
